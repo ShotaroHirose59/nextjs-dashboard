@@ -12,6 +12,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
   const handleSearch = useDebouncedCallback((term) => {
     console.log(`Searching... ${term}`);
     const params = new URLSearchParams(searchParams);
+    params.set('page', '1'); // NOTE: ページ番号を 1 にリセット
     if (term) {
       params.set('query', term);
     } else {

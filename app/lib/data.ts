@@ -128,6 +128,7 @@ export async function fetchFilteredInvoices(
   }
 }
 
+// NOTE: 検索クエリに基づくページの総数を返す
 export async function fetchInvoicesPages(query: string) {
   noStore();
   try {
